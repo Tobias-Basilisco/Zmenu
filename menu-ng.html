@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel='stylesheet'  href='css/main-menu.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='css/sf_styles-css' href='public.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='css/child-style-css' href='style.min.css' type='text/css' media='all' /></noscript>
+    <link rel='stylesheet' id='css/superfly-extension-toolbars-frontend-css-frontend.css-css' href='frontend.css' type='text/css' media='all' />
+    
+    
+    <script type='text/javascript' src='jquery.min.js' id='jquery-core-js'></script>
+    <script type='text/javascript' id='sf_main-js-extra'>
+        /* <![CDATA[ */
+        var SF_Opts = {
+            "wp_menu_id": "717",
+            "social": {
+                "facebook": "https:\/\/www.facebook.com\/NeroGiardini",
+                "instagram": "https:\/\/www.instagram.com\/nerogiardiniofficial\/",
+                "youtube": "https:\/\/www.youtube.com\/c\/NerogiardiniOfficial",
+                "email": "info@nerogiardini.it"
+            },
+            "search": "yes",
+            "blur": "no",
+            "fade": "no",
+            "test_mode": "no",
+            "hide_def": "no",
+            "mob_nav": "no",
+            "dynamic": "no",
+            "parent_ignore": "yes",
+            "sidebar_style": "side",
+            "sidebar_behaviour": "push",
+            "alt_menu": "",
+            "sidebar_pos": "left",
+            "width_panel_1": "350",
+            "width_panel_2": "250",
+            "width_panel_3": "350",
+            "width_panel_4": "200",
+            "base_color": "rgb(255, 255, 255)",
+            "opening_type": "click",
+            "sub_type": "flyout",
+            "video_bg": "",
+            "video_mob": "no",
+            "video_preload": "no",
+            "sub_mob_type": "dropdown",
+            "sub_opening_type": "hover",
+            "label": "square",
+            "label_top": "10px",
+            "label_size": "53",
+            "label_vis": "yes",
+            "item_padding": "25",
+            "bg": "",
+            "path": "https:\/\/nerogiardini.it\/wp-content\/plugins\/superfly-menu\/img\/",
+            "togglers": "",
+            "subMenuSupport": "yes",
+            "subMenuSelector": "sub-menu, children",
+            "eventsInterval": "51",
+            "activeClassSelector": "current-menu-item",
+            "allowedTags": "DIV, NAV, UL, OL, LI, A, P, H1, H2, H3, H4, SPAN",
+            "menuData": [],
+            "siteBase": "https:\/\/nerogiardini.it",
+            "plugin_ver": "5.0.24"
+        };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='public.min.js' id='sf_main-js'></script>
+    <script type='text/javascript' id='uncode-init-js-extra'>
+        /* <![CDATA[ */
+        var SiteParameters = {
+            "days": "giorni",
+            "hours": "ore",
+            "minutes": "minuti",
+            "seconds": "secondi",
+            "constant_scroll": "on",
+            "scroll_speed": "2",
+            "parallax_factor": "0.25",
+            "loading": "Caricamento...",
+            "slide_name": "slide",
+            "slide_footer": "footer",
+            "ajax_url": "https:\/\/nerogiardini.it\/wp-admin\/admin-ajax.php",
+            "nonce_adaptive_images": "c936e1470d",
+            "enable_debug": "",
+            "block_mobile_videos": "",
+            "is_frontend_editor": "",
+            "mobile_parallax_allowed": "",
+            "wireframes_plugin_active": ""
+        };
+        /* ]]> */
+    </script>
+    <meta name="generator" content="WPML ver:4.5.14 stt:38,1,4,3,27,46,2;" />
+    <script>
+        // global
+        window.SFM_is_mobile = (function() {
+            var n = navigator.userAgent;
+            var reg = new RegExp('Android\s([0-9\.]*)')
+            var match = n.toLowerCase().match(reg);
+            var android = match ? parseFloat(match[1]) : false;
+            if (android && android < 3.6) {
+                return;
+            };
+
+            return n.match(/Android|BlackBerry|IEMobile|iPhone|iPad|iPod|Opera Mini/i);
+        })();
+
+        window.SFM_current_page_menu = '717';
+
+        (function() {
+
+            var mob_bar = '';
+            var pos = 'left';
+            var iconbar = '';
+
+            var SFM_skew_disabled = (function() {
+                var window_width = window.innerWidth;
+                var sfm_width = 350;
+                if (sfm_width * 2 >= window_width) {
+                    return true;
+                }
+                return false;
+            })();
+
+            var classes = SFM_is_mobile ? 'sfm-mobile' : 'sfm-desktop';
+            var html = document.getElementsByTagName('html')[0]; // pointer
+            classes += mob_bar ? ' sfm-mob-nav' : '';
+            classes += ' sfm-pos-' + pos;
+            classes += iconbar ? ' sfm-bar' : '';
+            classes += SFM_skew_disabled ? ' sfm-skew-disabled' : '';
+
+            html.className = html.className == '' ? classes : html.className + ' ' + classes;
+
+        })();
+    </script>
+    <script>
+        ;
+        (function() {
+            var insertListener = function(event) {
+                if (event.animationName == "bodyArrived") {
+                    afterContentArrived();
+                }
+            }
+            var timer, _timer;
+
+            if (document.addEventListener && false) {
+                document.addEventListener("animationstart", insertListener, false); // standard + firefox
+                document.addEventListener("MSAnimationStart", insertListener, false); // IE
+                document.addEventListener("webkitAnimationStart", insertListener, false); // Chrome + Safari
+            } else {
+                timer = setInterval(function() {
+                    if (document.body) { //
+                        clearInterval(timer);
+                        afterContentArrived();
+                    }
+                }, 14);
+            }
+
+            function afterContentArrived() {
+                clearTimeout(_timer);
+                var htmlClss;
+
+                if (window.jQuery && window.jQuery.Deferred) { // additional check bc of Divi theme
+                    htmlClss = document.getElementsByTagName('html')[0].className;
+                    if (htmlClss.indexOf('sfm-pos') === -1) {
+                        document.getElementsByTagName('html')[0].className = htmlClss + ' ' + window.SFM_classes;
+                    }
+                    jQuery('body').fadeIn();
+                    jQuery(document).trigger('sfm_doc_body_arrived');
+                    window.SFM_EVENT_DISPATCHED = true;
+                } else {
+                    _timer = setTimeout(function() {
+                        afterContentArrived();
+                    }, 14);
+                }
+            }
+        })()
+    </script>
+    <script type='text/javascript'>
+    </script>
+    <div class="sfm-rollback sfm-color1 sfm-theme-none sfm-label-visible sfm-label-square  sfm-label-text sfm-fixed">   
+    <div role='button' tabindex='0' aria-haspopup="true" class='sfm-navicon-button x sf_label_default'>
+        <div class="sfm-navicon">
+
+        </div>    
+    </div>
+</div>
+        <div id="sfm-sidebar" style="opacity:0" data-wp-menu-id="717" class="sfm-theme-none sfm-widget-bottom sfm-hl-line sfm-indicators">   
+            <div class="sfm-scroll-wrapper sfm-scroll-main">        
+                <div class="sfm-scroll">          
+                    <div class="sfm-sidebar-close"> 
+                    </div>    
+                    <div class="sfm-toolbar-content">
+                        <div class="sfm-toolbar-signin"><a class="topright_signin" href="https://nerogiardini.it/accedi">Accedi</a><a href="https://nerogiardini.it/accedi"></a></div><div class="sfm-toolbar-language">
+                            <ul>
+                                <li class="active">IT <span>▼</span>
+                                    <ul>
+                                        <li class="sfm-toolbar-lang-selector"><a href="https://nerogiardini.it/en">Inglese</a></li><li class="sfm-toolbar-lang-selector"><a href="https://nerogiardini.it/fr">Francese</a></li><li class="sfm-toolbar-lang-selector"><a href="https://nerogiardini.it/de">Tedesco</a></li><li class="sfm-toolbar-lang-selector"><a href="https://nerogiardini.it/es">Spagnolo</a></li><li class="sfm-toolbar-lang-selector"><a href="https://nerogiardini.it/ru">Russo</a></li><li class="sfm-toolbar-lang-selector"><a href="https://nerogiardini.it/nl">Olandese</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sfm-logo">                                                                       
+                            <a href="https:\/\/nerogiardini.it\"><img src="https:\/\/nerogiardini.it\/wp-content\/uploads\/2023\/02\/NeroGiardini_black3.png" alt="logo_nerogiardini"></a>                                                
+                            <div class="sfm-title">
+                            </div>
+                        </div>    
+                           
+                        <nav class="sfm-nav">                
+                            <div class="sfm-va-middle">
+                                                 
+                                <ul id="sfm-nav" class="menu">
+                                    <li id="menu-item-307519" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-307519"><a href="https:\/\/shop.nerogiardini.it"><!-- shoponline -->ACQUISTA ONLINE</a></li>
+                                    <li id="menu-item-99715" class="menu_donna menu-item menu-item-type-taxonomy menu-item-object-categorie menu-item-has-children menu-item-99715"><a href="https:\/\/nerogiardini.it\/collezione\/donna\">Donna</a>
+                                        <ul class="sub-menu">
+                                            <li id="menu-item-185191" class="menu-img donna menu-item menu-item-type-taxonomy menu-item-object-categorie menu-item-has-children menu-item-185191"><a href="https:\/\/nerogiardini.it\/collezione\/donna\"><!-- trend -->Trend</a>
+                                                <ul class="sub-menu">
+                                                    <li id="menu-item-185104" class="menu-item menu-item-type-taxonomy menu-item-object-trend menu-item-185104"><a href="https:\/\/nerogiardini.it\/trend\/must-have?cat=donna">MUST HAVE</a></li>
+                                                    <li id="menu-item-271032" class="menu-item menu-item-type-taxonomy menu-item-object-trend menu-item-271032"><a href="https:\/\/nerogiardini.it\/trend\/sneakers-di-tendenza?cat=donna">SNEAKERS DI TENDENZA</a></li>
+                                                    <li id="menu-item-255663" class="menu-item menu-item-type-taxonomy menu-item-object-trend menu-item-255663"><a href="https:\/\/nerogiardini.it\/trend\/look-da-cerimonia?cat=donna">LOOK DA CERIMONIA</a></li>
+                                                    <li id="menu-item-210605" class="menu-item menu-item-type-taxonomy menu-item-object-trend menu-item-210605"><a href="https:\/\/nerogiardini.it\/trend\/look-comodo-e-comfy?cat=donna">LOOK COMODO E COMFY</a></li>
+                                                    <li id="menu-item-185108" class="menu-item menu-item-type-taxonomy menu-item-object-trend menu-item-185108"><a href="https:\/\/nerogiardini.it\/trend\/outfit-da-ufficio?cat=donna">OUTFIT DA UFFICIO</a></li>
+                                                    <li id="menu-item-303130" class="menu-item menu-item-type-taxonomy menu-item-object-trend menu-item-303130"><a href="https:\/\/nerogiardini.it\/trend\/spring-essentials?cat=donna">SPRING ESSENTIALS</a></li>
+                                                    <li id="menu-item-303131" class="menu-item menu-item-type-taxonomy menu-item-object-trend menu-item-303131"><a href="https:\/\/nerogiardini.it\/trend\/sandali-estate?cat=donna">SANDALI ESTATE</a></li>
+                                                    <li id="menu-item-304836" class="menu-item menu-item-type-taxonomy menu-item-object-trend menu-item-304836"><a href="https:\/\/nerogiardini.it\/trend\/unboxing-donna?cat=donna">UNBOXING DONNA</a></li>
+                                                </ul>
+                                            </li>
+                                                     <li id="menu-item-99708" class="menu-item menu-item-type-taxonomy menu-item-object-categorie menu-item-has-children menu-item-99708"><a href="https:\/\/nerogiardini.it\/collezione\/donna\/calzature-donna">Calzature</a> 
+                                                        <ul class="sub-menu">
+                                                            <li id="menu-item-179673" class="menu-item menu-item-type-taxonomy menu-item-object-categorie menu-item-179673"><a href="https:\/\/nerogiardini.it\/collezione\/donna\/calzature-donna\"><!-- visualizza-tutto -->Visualizza tutto</a></li> 
+                                                            <li id="menu-item-179674" class="menu-item menu-item-type-taxonomy menu-item-object-tipologia menu-item-179674"><a href="https:\/\/nerogiardini.it\/collezione\/donna\/calzature-donna\/sneakers">Sneakers</a></li> 
+                                                            <li id="menu-item-185175" class="menu-item menu-item-type-taxonomy menu-item-object-tipologia menu-item-185175"><a href="https:\/\/nerogiardini.it\/collezione\/donna\/calzature-donna\/tronchetti-e-stivaletti">Tronchetti e Stivaletti</a></li> 
+                                                            <li id="menu-item-303123" class="menu-item menu-item-type-taxonomy menu-item-object-tipologia menu-item-303123"><a href="https:\/\/nerogiardini.it\/collezione\/donna\/calzature-donna\/mocassini-e-francesine">Mocassini e Francesine</a></li> 
+                                                            <li id="menu-item-303124" class="menu-item menu-item-type-taxonomy menu-item-object-tipologia menu-item-303124"><a href="https:\/\/nerogiardini.it\/collezione\/donna\/calzature-donna\/sandali-eleganti">Sandali Eleganti</a></li> 
+                                                            <li id="menu-item-303125" class="menu-item menu-item-type-taxonomy menu-item-object-tipologia menu-item-303125"><a href="https:\/\/nerogiardini.it\/collezione\/donna\/calzature-donna\/sandali">Sandali</a></li> 
+                                                            <li id="menu-item-303126" class="menu-item menu-item-type-taxonomy menu-item-object-tipologia menu-item-303126"><a href="https:\/\/nerogiardini.it\/collezione\/donna\/calzature-donna\/ciabatte-e-sabot">Ciabatte e Sabot</a></li> 
+                                                            <li id="menu-item-303127" class="menu-item menu-item-type-taxonomy menu-item-object-tipologia menu-item-303127"><a href="https:\/\/nerogiardini.it\/collezione\/donna\/calzature-donna\/ballerine">Ballerine</a></li> 
+                                                            <li id="menu-item-303128" class="menu-item menu-item-type-taxonomy menu-item-object-tipologia menu-item-303128"><a href="https:\/\/nerogiardini.it\/collezione\/donna\/calzature-donna\/decollete-e-slingback">decollete-pochette</a></li>
+                                                        </ul>
+                                                    </li> 
+                                                            <li id="menu-item-185132" class="menu-item menu-item-type-taxonomy menu-item-object-categorie menu-item-185132"><a href="https:\/\/nerogiardini.it\/collezione\/donna\/borse-donna">Borse</a></li>
+                                                        </ul>
+                                                    </li> 
+                                                            <li id="menu-item-99714" class="menu_uomo menu-item menu-item-type-taxonomy menu-item-object-categorie menu-item-has-children menu-item-99714"><a href="https:\/\/nerogiardini.it\/collezione\/uomo">Uomo</a> 
+                                                                <ul class="sub-menu"> 
+                                                                    <li id="menu-item-185190" class="menu-item menu-item-type-taxonomy menu-item-object-categorie menu-item-has-children menu-item-185190"><a href="https:\/\/nerogiardini.it\/collezione\/uomo"><!-- trend -->Trend</a> 
+                                                                        <ul class="sub-menu"> 
+                                                                            <li id="menu-item-185110" class="menu-item menu-item-type-taxonomy menu-item-object-trend menu-item-185110"><a href="https:\/\/nerogiardini.it\/trend\/must-have?cat=uomo">MUST HAVE</a></li> 
+                                                                            <li id="menu-item-271037" class="menu-item menu-item-type-taxonomy menu-item-object-trend menu-item-271037"><a href="https:\/\/nerogiardini.it\/trend\/sneakers-di-tendenza?cat=uomo">SNEAKERS DI TENDENZA</a></li> 
+                                                                            <li id="menu-item-303134" class="menu-item menu-item-type-taxonomy menu-item-object-trend menu-item-303134"><a href="https:\/\/nerogiardini.it\/trend\/spring-essentials?cat=uomo">SPRING ESSENTIALS</a></li> 
+                                                                            <li id="menu-item-210610" class="menu-item menu-item-type-taxonomy menu-item-object-trend menu-item-210610"><a href="https:\/\/nerogiardini.it\/trend\/look-da-cerimonia?cat=uomo">LOOK DA CERIMONIA</a></li> 
+                                                                            <li id="menu-item-185114" class="menu-item menu-item-type-taxonomy menu-item-object-trend menu-item-185114"><a href="https:\/\/nerogiardini.it\/trend\/outfit-da-ufficio?cat=uomo">OUTFIT DA UFFICIO</a></li> 
+                                                                            <li id="menu-item-255664" class="menu-item menu-item-type-taxonomy menu-item-object-trend menu-item-255664"><a href="https:\/\/nerogiardini.it\/trend\/look-rilassato-e-comfy?cat=uomo">LOOK RILASSATO E COMFY</a></li> 
+                                                                            <li id="menu-item-304838" class="menu-item menu-item-type-taxonomy menu-item-object-trend menu-item-304838"><a href="https:\/\/nerogiardini.it\/trend\/unboxing-uomo?cat=uomo">UNBOXING UOMO</a></li>
+                                                                        </ul>
+                                                                    </li> 
+                                                                            <li id="menu-item-99711" class="menu-item menu-item-type-taxonomy menu-item-object-categorie menu-item-has-children menu-item-99711"><a href="https:\/\/nerogiardini.it\/collezione\/uomo\/calzature-uomo">Calzature</a> 
+                                                                                <ul class="sub-menu"> 
+                                                                                    <li id="menu-item-185076" class="menu-item menu-item-type-taxonomy menu-item-object-categorie menu-item-185076"><a href="https:\/\/nerogiardini.it\/collezione\/uomo\/calzature-uomo"><!-- visualizza-tutto -->Visualizza tutto</a></li> 
+                                                                                    <li id="menu-item-185091" class="menu-item menu-item-type-taxonomy menu-item-object-tipologia menu-item-185091"><a href="https:\/\/nerogiardini.it\/collezione\/uomo\/calzature-uomo\/sneakers">Sneakers</a></li> 
+                                                                                    <li id="menu-item-255674" class="menu-item menu-item-type-taxonomy menu-item-object-tipologia menu-item-255674"><a href="https:\/\/nerogiardini.it\/collezione\/uomo\/calzature-uomo\/stringate-e-derby">Stringate e Derby</a></li> 
+                                                                                    <li id="menu-item-255675" class="menu-item menu-item-type-taxonomy menu-item-object-tipologia menu-item-255675"><a href="https:\/\/nerogiardini.it\/collezione\/uomo\/calzature-uomo\/mocassini">Mocassini</a></li>
+                                                                                </ul>
+                                                                            </li> 
+                                                                                    <li id="menu-item-185134" class="menu-item menu-item-type-taxonomy menu-item-object-categorie menu-item-185134"><a href="https:\/\/nerogiardini.it\/collezione\/uomo\/borse-uomo">Borse</a></li>
+                                                                    </ul>
+                                                            </li> 
+                                                                                    <li id="menu-item-185096" class="menu_junior menu-item menu-item-type-taxonomy menu-item-object-categorie menu-item-has-children menu-item-185096"><a href="https:\/\/nerogiardini.it\/collezione\/junior">Junior</a> 
+                                                                                        <ul class="sub-menu"> 
+                                                                                            <li id="menu-item-304833" class="menu-item menu-item-type-taxonomy menu-item-object-categorie menu-item-has-children menu-item-304833"><a href="https:\/\/nerogiardini.it\/collezione\/junior\/kids-19-30">Kids (19-30)</a> 
+                                                                                                <ul class="sub-menu"> 
+                                                                                                    <li id="menu-item-304834" class="menu-item menu-item-type-taxonomy menu-item-object-tipologia menu-item-304834"><a href="https:\/\/nerogiardini.it\/collezione\/junior\/kids-19-30\/bambina">Bambina</a></li> 
+                                                                                                    <li id="menu-item-304835" class="menu-item menu-item-type-taxonomy menu-item-object-tipologia menu-item-304835"><a href="https:\/\/nerogiardini.it\/collezione\/junior\/kids-19-30\/bambino">Bambino</a></li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </li> 
+                                                                                                    <li id="menu-item-234535" class="menu_teens menu-item menu-item-type-taxonomy menu-item-object-categorie menu-item-has-children menu-item-234535"><a href="https:\/\/nerogiardini.it\/collezione\/junior\/teens-31-39">Teens</a> 
+                                                                                                        <ul class="sub-menu"> 
+                                                                                                            <li id="menu-item-185097" class="double-col-wide menu-item menu-item-type-taxonomy menu-item-object-categorie menu-item-has-children menu-item-185097"><a href="https:\/\/nerogiardini.it\/collezione\/junior\/teens-31-39">Teens (31-39)</a> 
+                                                                                                                <ul class="sub-menu"> 
+                                                                                                                    <li id="menu-item-185127" class="menu-item menu-item-type-taxonomy menu-item-object-tipologia menu-item-185127"><a href="https:\/\/nerogiardini.it\/collezione\/junior\/teens-31-39\/ragazza">Ragazza</a></li> 
+                                                                                                                    <li id="menu-item-185126" class="menu-item menu-item-type-taxonomy menu-item-object-tipologia menu-item-185126"><a href="https:\/\/nerogiardini.it\/collezione\/junior\/teens-31-39\/ragazzo">Ragazzo</a></li>
+                                                                                                                </ul>
+                                                                                                            </li>
+                                                                                                        </ul>
+                                                                                                    </li> 
+                                                                                                                    <li id="menu-item-312035" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-312035"><a href="https:\/\/nerogiardini.it\/decollete-pochette">DECOLETTE E POCHETTE</a></li> 
+                                                                                                                    <li id="menu-item-307932" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307932"><a href="https:\/\/nerogiardini.it\/catalogo">LOOKBOOK</a></li> 
+                                                                                                                    <li id="menu-item-73011" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73011"><a href="https:\/\/nerogiardini.it\/made-in-italy">Made in Italy</a></li> 
+                                                                                                                    <li id="menu-item-73008" class="hide menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-73008"><a href="https:\/\/nerogiardini.it\/azienda">Azienda</a> 
+                                                                                                                        <ul class="sub-menu"> 
+                                                                                                                            <li id="menu-item-179861" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-179861"><a href="#">NeroGiardini</a>
+                                                                                                                                <ul class="sub-menu"> 
+                                                                                                                                <li id="menu-item-73009" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73009"><a href="https:\/\/nerogiardini.it\/imprenditore">L\u2019imprenditore</a></li> 
+                                                                                                                                <li id="menu-item-73010" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73010"><a href="https:\/\/nerogiardini.it\/produzione">Produzione</a></li> 
+                                                                                                                                <li id="menu-item-73014" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73014"><a href="https:\/\/nerogiardini.it\/responsabilita-sociale">Responsabilit\u00e0 sociale</a></li> 
+                                                                                                                                <li id="menu-item-73012" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73012"><a href="https:\/\/nerogiardini.it\/azienda-e-le-persone">L\u2019azienda e le persone</a></li> 
+                                                                                                                                <li id="menu-item-73017" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73017"><a href="https:\/\/nerogiardini.it\/e-commerce">E-commerce</a></li> 
+                                                                                                                                <li id="menu-item-241868" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-241868"><a target="_blank" rel="noopener" href="https:\/\/lacalzaturaitaliana.it\/">La Calzatura Italiana</a></li> 
+                                                                                                                                <li id="menu-item-203595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203595"><a href="https:\/\/nerogiardini.it\/tabella-taglie">Tabella Taglie</a></li> 
+                                                                                                                                <li id="menu-item-210630" class="concessionario menu-item menu-item-type-post_type menu-item-object-page menu-item-210630"><a href="https:\/\/nerogiardini.it\/diventa-concessionario">Diventa Concessionario</a></li> 
+                                                                                                                                <li id="menu-item-73020" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73020"><a target="_blank" rel="noopener" href="https:\/\/works.nerogiardini.it">Lavora con noi</a></li> 
+                                                                                                                                <li id="menu-item-73015" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73015"><a href="https:\/\/nerogiardini.it\/press">Press</a></li> 
+                                                                                                                                <li id="menu-item-73019" class="sep-top mar-top menu-item menu-item-type-post_type menu-item-object-page menu-item-73019"><a href="https:\/\/nerogiardini.it\/contatti">Contatti</a></li>
+                                                                                                                                </ul>
+                                                                                                                            </li> 
+                                                                                                                                <li id="menu-item-241866" class="lclztr-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-241866"><a href="https:\/\/nerogiardini.it\/stores">FLAGSHIP STORES</a></li>
+                                                                                                                        </ul>
+                                                                                                                    </li> 
+                                                                                                                                <li id="menu-item-311884" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-311884"><a target="_blank" rel="noopener" href="https:\/\/b2b.nerogiardini.com">B2B</a></li> 
+                                                                                                                                <li id="menu-item-307520" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307520"><a href="https:\/\/nerogiardini.it\/store-locator">Store Locator</a></li>
+                                </ul>                    
+                                                                                                                                <div class="sfm-widget-area">
+                                                                                                                                </div>
+                            </div>
+                        </nav>
+                                                                                                                                    <ul class="sfm-social sfm-social-icons">
+
+                                                                                                                                    </ul>
+                                                                                                                                        <div class="sfm-widget sfm-widget-bottom sfm-copy">
+                                                                                                                                            <p style="text-align: center;">2023 NeroGiardini</p>
+                                                                                                                                        </div>
+                </div>
+            </div>
+                                                                                                                                        <div class="sfm-sidebar-bg">     
+                                                                                                                                        </div>
+                                                                                                                                            <div class="sfm-view sfm-view-level-custom">
+                                                                                                                                                <span class="sfm-close">
+                                                                                                                                                    
+                                                                                                                                                </span>
+                                                                                                                                            </div>
+        </div>
+                                                                                                                                                <div id="sfm-overlay-wrapper">
+                                                                                                                                                    <div id="sfm-overlay">
+                                                                                                                                                    </div>
+                                                                                                                                                        <div class="sfm-nav-bg_item -top">
+                                                                                                                                                        </div>
+                                                                                                                                                            <div class="sfm-nav-bg_item -bottom\">
+                                                                                                                                                            </div>
+                                                                                                                                                </div>                                                                                                                                                                                                                                                                                                        <script id="wpcp_disable_selection" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        document.documentElement.className += " js";
+    </script>
+
+
+   
+    <style type="text/css">
+        .sfm-toolbar-content {
+            background: #c81818;
+        }
+
+        .sfm-toolbar-container a,
+        .sfm-toolbar-welcome,
+        .sfm-toolbar-language {
+            color: #ffffff
+        }
+    </style>
+
+    <script type="text/javascript" id="flying-scripts">
+        const loadScriptsTimer = setTimeout(loadScripts, 3 * 1000);
+        const userInteractionEvents = ["mouseover", "keydown", "touchstart", "touchmove", "wheel"];
+        userInteractionEvents.forEach(function(event) {
+            window.addEventListener(event, triggerScriptLoader, {
+                passive: !0
+            })
+        });
+
+        function triggerScriptLoader() {
+            loadScripts();
+            clearTimeout(loadScriptsTimer);
+            userInteractionEvents.forEach(function(event) {
+                window.removeEventListener(event, triggerScriptLoader, {
+                    passive: !0
+                })
+            })
+        }
+
+        function loadScripts() {
+            document.querySelectorAll("script[data-type='lazy']").forEach(function(elem) {
+                elem.setAttribute("src", elem.getAttribute("data-src"))
+            })
+        }
+    </script>
+
+</body>
+
+</html>

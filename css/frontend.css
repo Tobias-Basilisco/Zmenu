@@ -1,0 +1,466 @@
+/**
+ * Frontend-specific CSS.
+ */
+@font-face {
+    font-family: 'sfmet';
+    src:  url('../../fonts/sfmet.eot?6t5ww2');
+    src:  url('../../fonts/sfmet.eot?6t5ww2#iefix') format('embedded-opentype'),
+    url('../../fonts/sfmet.ttf?6t5ww2') format('truetype'),
+    url('../../fonts/sfmet.woff?6t5ww2') format('woff'),
+    url('../../fonts/sfmet.svg?6t5ww2#sfmet') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="sfmet-icon-"], [class*=" sfmet-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'sfmet' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sfmet-icon-icon_cart:before {
+    content: "\e900";
+}
+.sfmet-icon-icon_pass:before {
+    content: "\e901";
+}
+.sfmet-icon-icon_user:before {
+    content: "\e902";
+}
+.sfmet-icon-icon_cross:before {
+    content: "\ea0f";
+}
+.sfmet-icon-icon_close:before {
+    content: "\e5cd";
+}
+.sfmet-icon-sfmt-close:before {
+    content: "\e903";
+}
+/*SMF temporary fix >*/
+
+.sfm-pos-right .sfm-style-skew #sfm-sidebar .sfm-logo{
+    padding-right: 13%!important;
+    padding-left: 0!important;
+    width: auto!important;
+}
+.sfm-sidebar-always #sfm-sidebar .sfm-logo {
+    margin-top: 40px!important;
+}
+#sfm-sidebar .sfm-va-middle {
+    display: block!important;
+    height: auto!important;
+    margin-top: 0px!important;
+}
+#sfm-sidebar .sfm-nav,
+#sfm-sidebar .sfm-logo {
+    position: relative!important;
+    display: block!important;
+    top: 0!important;
+    left: 0!important;
+}
+
+#sfm-sidebar .sfm-nav {
+    height: auto;
+}
+
+#sfm-sidebar .sfm-logo {
+    margin-top: 30px!important;
+    margin-bottom: 30px!important;
+}
+.sfm-style-full .sfm-sidebar-close {
+    z-index: 999999!important;
+}
+/*SMF temporary fix < */
+.sfm-toolbar-container{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0px auto 10px;
+    padding: 0px 10px 0px 10px;
+    /*padding: 0px 10px 0px 10px;*/
+    z-index: 99999;
+    box-sizing: border-box;
+}
+.sfm-toolbar-container a{
+    text-decoration: none;
+}
+.sfm-toolbar-container a:hover{
+    text-decoration: underline;
+}
+.sfm-toolbar-content{
+    position: relative;
+    margin: 10px auto 0px;
+    padding: 10px 10px 10px 18px;
+    border-radius: 20px;
+    max-width: 300px;
+    font-size: 14px;
+    height: 34px;
+    box-sizing: border-box;
+}
+.sfm-toolbar-welcome{
+    display: block;
+    font-size: 14px;
+    color: #ababab;
+    position: relative;
+    margin: 0px auto 0px;
+    max-width: 300px;
+    width: 100%;
+    padding: 0px 18px 0px 18px;
+    /*text-align: center;*/
+}
+.sfm-toolbar-welcome.sfm-toolbar-center{
+    text-align: center;
+}
+.sfm-toolbar-logout, .sfm-toolbar-signin{
+    display: block;
+    position: relative;
+    width: auto;
+    float: left;
+    margin: 0px 0px 0px 0px;
+}
+.sfm-toolbar-cart{
+    display: block;
+    position: relative;
+    width: auto;
+    float: right;
+    margin: -5px 10px 0px 0px;
+}
+.sfm-toolbar-cart a:hover{
+    text-decoration: none;
+}
+.sfm-toolbar-cart .sfmet-icon-icon_cart{
+    font-size: 25px;
+}
+.sfm-toolbar-cart i{
+    font-size: 19px;
+    color: #fff;
+}
+.sfm-toolbar-cart .lblCartCount {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    vertical-align: top;
+    float: right;
+    margin: 0px 0px 0px 0px;
+}
+.sfm-toolbar-language ul li.active span{
+    font-size: 6px;
+    display: block;
+    float: right;
+    margin: 4px 0px 0px 4px;
+}
+.sfm-toolbar-language{
+    display: block;
+    position: relative;
+    width: auto;
+    float: right;
+}
+.sfm-toolbar-language ul {
+    text-align: left;
+    display: inline;
+    margin: 0;
+    padding: 15px 4px 17px 0;
+    list-style: none;
+
+}
+.sfm-toolbar-language ul li.active{
+    margin: -10px 15px 0px 0px;
+}
+.sfm-toolbar-language ul li {
+    display: inline-block;
+    position: relative;
+    padding: 10px 15px 10px 15px;
+    margin: 0px 0px 0px 0px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.sfm-toolbar-language ul li:hover {
+    background: #2b2b2b;
+    color: #fff;
+}
+.sfm-toolbar-language ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 34px;
+    right: 0px;
+    width: 140px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transiton: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    -transition: opacity 0.2s;
+}
+.sfm-toolbar-language ul li ul li {
+    background: rgba(20, 23, 26, 0.86);
+    display: block;
+    padding: 15px 10px 15px 15px;
+}
+.sfm-toolbar-language ul li ul li:hover { background: #666; }
+.sfm-toolbar-language ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sfm-toolbar-signin-form-overlay{
+    display: block;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    width: 300%;
+    height: 300%;
+    margin-top: -30%;
+    margin-left: -100%;
+    z-index: 9999999;
+}
+.sfm-toolbar-signin-form{
+    display: block;
+    position: fixed;
+    background: #1B1B1B;
+    padding: 20px 30px 40px 30px;
+    z-index: 99999999;
+    width: 100%;
+    max-width: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)!important;
+    -webkit-filter: blur(0px)!important;
+    -moz-filter: blur(0px)!important;
+    -ms-filter: blur(0px)!important;
+    -o-filter: blur(0px)!important;
+    filter: blur(0px)!important;
+}
+.sfm-toolbar-signin-form a{
+    color: #fff;
+    text-decoration: none;
+}
+.sfm-toolbar-signin-form-back{
+    text-align: right;
+    font-size: 17px;
+}
+.sfm-toolbar-signin-form-back a:hover{
+    text-decoration: none;
+}
+.sfm-toolbar-signin-form-title{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    margin: 25px 0px 30px 0px;
+}
+.sfm-toolbar-signin-form-username{
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.sfm-toolbar-signin-form-password{
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.sfm-toolbar-signin-form-username input, .sfm-toolbar-signin-form-password input{
+    color: #6d6d6d!important;
+    margin: 0px 0px 15px 0px!important;
+    width: 100%!important;
+    height: 46px!important;
+    background-color: #101010!important;
+    border: 2px solid #454545!important;
+    padding: 11px 10px 9px 40px!important;
+    box-shadow: none!important;
+    box-sizing: border-box;
+}
+.sfm-toolbar-signin-form-username input{
+    background-image: url(../../frontend/images/icon_user.svg)!important;
+    background-position: 7px 6px!important;
+    background-repeat: no-repeat!important;
+    background-size: 30px!important;
+    line-height: 1!important;
+}
+.sfm-toolbar-signin-form-password input{
+    background-image: url(../../frontend/images/icon_pass.svg)!important;
+    background-position: 7px 6px!important;
+    background-repeat: no-repeat!important;
+    background-size: 30px!important;
+    line-height: 1!important;
+}
+.sfm-toolbar-signin-form-actions{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 35px;
+}
+.sfm-toolbar-signin-form-remember{
+    width: 70%;
+    float: left;
+}
+.sfm-toolbar-signin-form-login{
+    width: 30%;
+    height: 46px;
+    float: right;
+    margin-top: -5px;
+}
+.sfm-toolbar-signin-form-login .sfm-toolbar-btn {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 15px;
+    background: #DD4287;
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.sfm-toolbar-signin-form-login .sfm-toolbar-btn:hover {
+    text-decoration: none;
+}
+.sfm-toolbar-signin-form-lost{
+    /*display: block;*/
+    /*position: relative;*/
+    /*width: 100%;*/
+    font-size: 15px;
+}
+
+.sfm-toolbar-signin-form-extra {
+    margin-top: 20px;
+}
+
+.sfm-toolbar-signin-form-extra a{
+    font-size: 15px;
+}
+.sfm-toolbar-signin-form .control {
+    display: block;
+    position: relative;
+    padding-left: 40px!important;
+    margin-bottom: 5px!important;
+    padding-top: 10px!important;
+    text-transform: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+.sfm-toolbar-signin-form .control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.sfm-toolbar-signin-form .control_indicator {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background: #101010;
+    border: 2px solid #4C4C4C;
+}
+.sfm-toolbar-signin-form-remember label{
+    color: #808080;
+}
+.sfm-toolbar-signin-form .control-radio .control_indicator {
+    border-radius: 0px;
+}
+
+.sfm-toolbar-signin-form .control:hover input ~ .control_indicator,
+.sfm-toolbar-signin-form .control input:focus ~ .control_indicator {
+    background: #4B4A4A;
+}
+
+.sfm-toolbar-signin-form .control input:checked ~ .control_indicator {
+    background: #4B4B4B;
+}
+.sfm-toolbar-signin-form .control:hover input:not([disabled]):checked ~ .control_indicator,
+.sfm-toolbar-signin-form .control input:checked:focus ~ .control_indicator {
+    background: #4B4B4B;
+}
+.sfm-toolbar-signin-form .control input:disabled ~ .control_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.sfm-toolbar-signin-form .control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.sfm-toolbar-signin-form .control input:checked ~ .control_indicator:after {
+    display: block;
+}
+.sfm-toolbar-signin-form .control-checkbox .control_indicator:after {
+    left: 8px;
+    top: 2px;
+    width: 3px;
+    height: 13px;
+    border: solid #FFFFFF;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.sfm-toolbar-signin-form .control-checkbox input:disabled ~ .control_indicator:after {
+    border-color: #7b7b7b;
+}
+.ToolbarTopMarginForLogo{
+    margin-top: 80px!important;
+}
+.ToolbarTopMarginForFullscreen{
+    margin-top: 10px!important;
+}
+.ToolbarPaddingForSkew{
+    padding: 0px 0px 0px 13%!important;
+}
+.ToolbarPaddingForSkew .sfm-toolbar-welcome{
+    max-width: 100%!important;
+}
+.ToolbarPaddingForSkew .sfm-toolbar-content{
+    max-width: 100%!important;
+}
+.ToolbarMarginTop15{
+    margin: 15px auto 10px!important;
+}
+/* Change Autocomplete styles in Chrome*/
+.sfm-toolbar-signin-form input:-webkit-autofill,
+.sfm-toolbar-signin-form input:-webkit-autofill:hover,
+.sfm-toolbar-signin-form input:-webkit-autofill:focus,
+.sfm-toolbar-signin-form input:-webkit-autofill,
+.sfm-toolbar-signin-form textarea:-webkit-autofill,
+.sfm-toolbar-signin-form textarea:-webkit-autofill:hover,
+.sfm-toolbar-signin-form textarea:-webkit-autofill:focus,
+.sfm-toolbar-signin-form select:-webkit-autofill,
+.sfm-toolbar-signin-form select:-webkit-autofill:hover,
+.sfm-toolbar-signin-form select:-webkit-autofill:focus {
+    color: #6d6d6d;
+    border: 2px solid #454545;
+    box-shadow: none !important;
+    padding-left: 15px !important;
+}
+
+@media (max-width: 667px) {
+
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+}
+
+
+@media (max-width: 1280px) {
+    .ToolbarTopMarginForLogo{
+        margin-top: 65px!important;
+    }
+}
